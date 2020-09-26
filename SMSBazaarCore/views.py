@@ -11,7 +11,7 @@ def index(request):
         return HttpResponse("Go away.")
     elif request.method == 'POST':
         """account_sid = 'AC3dfc80e02f7e984afb857ba4900a0fcd'
-        auth_token = 'e36aab7c7237ee2c0e149f2de034c944'
+        auth_token = '22a099b9d4f38e33c1b3bb12b6a9e3b9'
         client = Client(account_sid, auth_token)
         message = client.messages \
             .create(
