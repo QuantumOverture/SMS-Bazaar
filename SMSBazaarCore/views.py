@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from twilio.rest import Client
-from twilio.twiml.messaging_response import MessagingResponse
+from twilio.twiml.messaging_response import Message, MessagingResponse
 
 
 
@@ -26,4 +26,4 @@ def index(request):
         # Add a message
         resp.message("The Robots are coming! Head for the hills!")
 
-        return str(resp)
+        return HttpResponse(str(resp))
