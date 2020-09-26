@@ -26,12 +26,13 @@ SECRET_KEY = '@x#10(e8-!$%3=ge)yi85(f-hhkvmh*qrbt53*=qhv&*#+gh8f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['herokusmsbazaar.herokuapp.com']
+ALLOWED_HOSTS = ['herokusmsbazaar.herokuapp.com', '7b04e1e16362.ngrok.io', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    # 'SMSBazaarCore.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,8 +43,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -109,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EET'
 
 USE_I18N = True
 
@@ -135,7 +136,7 @@ STATICFILES_DIRS = (
 )
 
 #  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 import dj_database_url
 prod_db  =  dj_database_url.config(conn_max_age=500)
