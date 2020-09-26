@@ -13,7 +13,7 @@ def index(request):
         client = Client(account_sid, auth_token)
         message = client.messages \
             .create(
-                body=str(request.body)pip,
+                body=str(request.body),
                 from_='+18772579727',
                 to='+14156906522'
             )                                                                                                                                                                                                                    from_='+18559651822',
