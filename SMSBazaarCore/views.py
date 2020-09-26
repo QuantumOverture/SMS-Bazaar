@@ -16,8 +16,5 @@ def index(request):
                 body=str(request.body),
                 from_='+18772579727',
                 to='+14156906522'
-            )                                                                                                                                                                                                                    from_='+18559651822',
-                                                                                                                                                                                                                                to='+14156906522'
-                                                                                                                                                                                                                                )
-
+            )
         print(message.sid)
