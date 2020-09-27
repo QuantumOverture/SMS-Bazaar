@@ -9,7 +9,7 @@ Message_Dict = {'SmsMessageSid': 'SM5f4fe87cab971ed997b9dcfd0babfb5b', 'NumMedia
                 'MessageSid': 'SM5f4fe87cab971ed997b9dcfd0babfb5b', 'AccountSid': 'ACce87bd19e386f76c3ac5b8412d1c9b26',
                 'From': '+14156906522', 'ApiVersion': "2010-04-01'"}
 """
-apiKey = "21b8c81e57b638daf07350693d2f82e1"
+apiKey = ""
 
 """
 * The first name field for customers is their number
