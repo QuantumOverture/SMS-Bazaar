@@ -22,3 +22,25 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+
+
+class Nonuser(models.Model):
+    phone_number = models.CharField(max_length=200, primary_key=True)
+
+
+class Scratch(models.Model):
+    code = models.CharField(max_length=10, primary_key=True)
+    amount = models.PositiveIntegerField()
+
+
+class Item(models.Model):
+    item_name = models.CharField(max_length=200, primary_key=True)
+    description = models.CharField(max_length=200)
+    upload = models.ImageField(upload_to='uploads/')
+    city = models.CharField(max_length=200)
+    address = models.CharField(max_length=200)
+    price = models.PositiveIntegerField()
+    vendor_ph_num = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.item_name + " | " + self.description + " | " + self.city + " | " + str(self.price)

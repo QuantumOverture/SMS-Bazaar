@@ -26,7 +26,7 @@ SECRET_KEY = '@x#10(e8-!$%3=ge)yi85(f-hhkvmh*qrbt53*=qhv&*#+gh8f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['herokusmsbazaar.herokuapp.com', '7b04e1e16362.ngrok.io', '127.0.0.1']
+ALLOWED_HOSTS = ['herokusmsbazaar.herokuapp.com', 'd74f62b84250.ngrok.io', '127.0.0.1']
 
 
 # Application definition
@@ -141,3 +141,5 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 import dj_database_url
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
+
+MEDIA_ROOT = ''
